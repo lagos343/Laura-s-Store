@@ -1,0 +1,195 @@
+:root{
+    --azulsuave: #2EC5CE;
+    --blanco: #fff;
+    --grisoscuro: #20262E;    
+    --rosasuave: #F1E4FF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: var(--blanco);
+}
+
+.contenedor{
+    width: 100%;
+    padding: 0 70px;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;      
+}
+
+.boton.carta
+{
+    background-color: #2EC5CE;
+    border-style: none;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    border-radius: 5px;
+    width: 90px;
+    color: #ffffff;
+    margin: auto;
+    float: right;
+    cursor: pointer;
+}
+.img-div-b{
+    content: "";
+    width: 250px;
+    min-height: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-div{
+    content: "";
+    width: 350px;
+    min-height: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+}
+.apple{
+    background-image: url('../img/apple.jpg');
+}
+.dg{
+    background-image: url('../img/dg.jpg');
+}
+.compu{
+    background-image: url('../img/compus.jpg');
+}
+.gadge{
+    background-image: url('../img/gadget.png');
+}
+.ace{
+    background-image: url('../img/ace.png');
+}
+.cremas{
+    background-image: url('../img/cremas.jpg');
+}
+.resuradora{
+    background-image: url('../img/rasuradora.png');
+}
+.shampoo{
+    background-image: url('../img/shmapoo.jpg');
+}
+
+/*------------------------------
+segundo bloque de productos*/
+
+.grafica{
+    background-image: url('../img/grafica.jpeg');
+}
+.monitor{
+    background-image: url('../img/monitor-gaming.jpeg');
+}
+.teclado{
+    background-image: url('../img/teclado-gaming.jpeg');
+}
+.mouse{
+    background-image: url('../img/mouse-gamingjpeg.jpeg');
+}
+
+.zapatos-uno{
+    background-image: url('../img/calzado-zapatos-uno.jpeg');
+}
+.zapatos-dos{
+    background-image: url('../img/calzado-zapatos-dos.jpeg');
+}
+.zapatos-tres{
+    background-image: url('../img/calzado-zapatos-tres.jpeg');
+}
+.zapatos-cuatro{
+    background-image: url('../img/calzado-zapatos-cuatro.jpeg');
+}
+
+
+.columna-ofertas{
+    float: left; 
+    width: 50%;
+    padding: 30px;  
+    margin: 0.75%; 
+    font-size: 20px;
+    height: 25rem;
+    margin: auto; 
+    margin-bottom: 5rem;
+    padding: 2rem;    
+}
+
+.columna-ofertas strong{
+    color: var(--grisoscuro);
+}
+.columna-ofertas.belleza{
+
+    float: left; 
+    width: 23.5%;
+    padding: 30px;  
+    margin: 0.75%; 
+    font-size: 20px;
+    height: 25rem;  
+    margin: auto; 
+    margin-bottom: 5rem;
+    padding: 2rem;
+    text-align: center;
+}
+.vermas{
+    margin: 1rem;
+    padding-bottom: .5rem;
+    
+}
+
+@media screen and (max-width: 1000px) {   
+
+    /*---------------------------------------
+    seccion ofertas de productos*/
+    .columna-ofertas.belleza{
+        width: 50%;
+    }    
+}
+
+@media screen and (max-width: 800px){
+   
+    /*---------------------------------------
+    seccion ofertas de productos*/
+    .columna-ofertas{
+        width: 100%;
+    }
+
+    .columna-ofertas.belleza{
+        width: 100%;
+        height: 18rem;
+    }
+
+    .columna-ofertas h3{
+        font-size: 16px;
+    }
+
+    .columna-ofertas strong{
+        font-size: 15px;
+    }   
+}
+
+@media screen and (max-width: 560px) {
+    
+    /*---------------------------------------
+    seccion ofertas de productos*/
+    .img-div{
+        content: "";
+        width: 250px;
+        min-height: 100%;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: cover; */
+    }
+}

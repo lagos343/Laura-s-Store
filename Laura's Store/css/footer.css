@@ -1,0 +1,136 @@
+:root{
+    --azulsuave: #2EC5CE;
+    --blanco: #fff;
+    --grisoscuro: #20262E;    
+    --rosasuave: #F1E4FF;
+}
+
+/*barra separatoria de el footer*/
+
+hr{
+    height: 0.5px;
+    border: 1px 1px 1px 1px;
+    border-color: var(--blanco);
+}
+
+/*especificaciones generales del footer*/
+
+footer{
+    width: 100%;
+    padding: 30px 30px;
+    background: var(--grisoscuro);
+    display: flex;
+    align-items: center;
+}
+
+/*container de todos los elementos del foooter*/
+
+.container-footer{
+    color: var(--blanco);
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.container-footer h4{
+    font-size: 20px;
+}
+
+
+/*menu de enlaces del footer*/
+.container-footer ul{   
+    display: flex;
+    justify-content: center;    
+}
+
+.container-footer ul li a{
+    margin-left: 70px;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.container-footer ul li a:hover{
+    color: var(--azulsuave);
+}
+
+.seccion-copyrigth{
+    font-size: 15px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.redes-sociales i{    
+    font-size: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.redes-sociales i:hover{
+    color: var(--azulsuave);
+}
+
+#item-inicial-footer{
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 800px){
+
+    .container-footer h4{
+        font-size: 17px;
+    }
+
+    .container-footer ul li a{
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .seccion-copyrigth{
+        font-size: 14px;
+    }
+
+    .redes-sociales i{    
+        font-size: 25px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .container-footer h4{
+        font-size: 17px;
+    }
+    
+    .container-footer ul{
+        display: block;
+        width: 100%;       
+        text-align: center;        
+    }
+
+    .container-footer ul li{
+        padding-top: 20px;                         
+    }
+
+    .container-footer ul li a{
+        margin: 0px;
+    }
+
+    .seccion-copyrigth{
+        display: block;
+    }
+
+    .redes-sociales{
+        padding-top: 15px;
+    }
+
+    .redes-sociales i{
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .redes-sociales i{
+        margin: 5px;
+    }
+}

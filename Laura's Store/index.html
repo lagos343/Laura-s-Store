@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Laura's Store | Inicio</title>
+</head>
+<body> 
+    <!-- header -->    
+    <header>        
+        <div class="logo">Laura's Store</div>
+        <input type="checkbox" id="chk_menu" hidden>              
+        <nav>
+            <div class="logo">Laura's Store</div>            
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="view/categorias.html">Categorias</a></li>
+                <li><a href="view/productos.html">Productos</a></li>
+                <li><a href="view/ofertas.html">Ofertas</a></li>
+                <li><a href="view/contactanos.html">Contacto</a></li>
+            </ul>
+            <input type="search" name="ser_busqueda" class="barra-busqueda-nav" placeholder="Busqueda...................."> 
+            <input type="button" value="Login" class="btn-login-nav">
+            <input type="button" value="Sign up" class="btn-signup-nav">
+        </nav>   
+        <input type="search" name="ser_busqueda" class="barra-busqueda" placeholder="Busqueda...................."> 
+        <div class="botones-header">
+            <input type="button" value="Login" class="btn-login">
+            <input type="button" value="Sign up" class="btn-signup">  
+        </div>
+        <div class="carrito">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>     
+        <label for="chk_menu" class="mini-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+        
+    <!-- Seccion de presentacion -->
+    <div class="container-quienes-somos">
+        <div class="imagen-quienes-somos">
+            <img src="img/chicagerente.png" alt="chica gerente">
+        </div>
+        <div class="container-texto">
+            <h2>¿Quienes Somos?</h2><br>
+            <p>Somos una empresa responsable y comprometida con nuestros clientes, tratamos de que 
+                los productos lleguen en el mejor estado y en el menor tiempo posible, para nosotros 
+                nuestros clientes son lo mas importante por eso tenemos los plazos de garantia mas 
+                largos del mercado.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Seccion de ofertas especiales -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+         <h2>Ofertas Especiales</h2>
+        </div>
+        <br>
+        <br>    
+        <div class="row">
+            <div class="columna-ofertas">
+                <h3>Ahorra en telefonos Appple</h3>
+                <div class="img-div apple">
+
+                </div>
+                <div class="vermas">
+                    <a href=""><strong>Apple</strong></a>
+                    <button class="boton carta">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>Aditamentos de hogar</h3>
+                <div class="img-div dg">
+
+                </div>
+                
+                <div class="vermas">
+                    <a href=""><strong>D&G</strong></a>
+                    <button class="boton carta">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>Computo</h3>
+                <div class="img-div compu">
+
+                </div>
+
+                <div class="vermas">
+                    <a href=""><strong>Sistemas</strong></a>
+                    <button class="boton carta">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>Accesorios</h3>
+                <div class="img-div gadge">
+
+                </div>
+                <div class="vermas">
+                    <a href=""><strong>Extras</strong></a>
+                    <button class="boton carta">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+            
+        </div>
+
+    </div> 
+    
+    <!-- Seccion de lista de los ibros mas vendidos -->
+    <br><br>
+    <div class="contenedor-libros">
+        <div><h2>Libros mas vendidos</h2></div>
+        <br><br>
+        <div class="container-row-libros">
+            <div class="row-libros">            
+                <div class="columna-libros" id="libro1">    
+                </div>
+                <div class="columna-libros" id="libro2">
+                </div>
+                <div class="columna-libros" id="libro3">
+                </div>
+                <div class="columna-libros" id="libro4">
+                </div>
+                <div class="columna-libros" id="libro5">
+                </div>
+                <div class="columna-libros" id="libro6">
+                </div>            
+            </div>
+        </div>        
+    </div>
+
+    <!-- Seccion de el top de categorias -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+         <h2>Top 8 categorias mas compradas</h2>
+        </div>
+        <br><br>    
+        <div class="row">
+            <div class="columna">
+                <a href=""><strong>Electrónicos y Computación</strong></a>
+                <img src="./img/la-red.png" alt="" width="50" height="50" class="iconos-top-categorias">
+            </div>
+            <div class="columna">
+                <a href=""><strong>Arte y Artesanias</strong></a>
+                <img src="./img/lienzo.png" alt="" width="50" height="50" class="iconos-top-categorias">
+            </div>
+            <div class="columna">
+                <a href=""><strong>Camaras y Fotografía</strong></a>
+                <img src="./img/camara-fotografica.png" alt="" width="50" height="50" class="iconos-top-categorias">
+            </div>
+            <div class="columna">
+                <a href=""><strong>Teléfonos Celulares</strong></a>
+                <img src="./img/smartphone.png" alt="" width="50" height="50" class="iconos-top-categorias">
+            </div>
+            <div class="columna">
+                <a href=""><strong>Seguridad y Vigilancia</strong></a>
+                <img src="./img/seguridad-informatica.png" alt="" width="50" height="50" class="iconos-top-categorias">
+            </div>
+            <div class="columna">
+                <a href=""><strong>Televisión y Video</strong></a>
+                <img src="./img/visualizacion-de-video.png" alt="" width="50" height="50" class="iconos-top-categorias">
+            </div>
+            <div class="columna">
+                <a href=""><strong>Lectura y Libros Electrónicos</strong></a>
+                <img src="./img/libro.png" alt="" width="50" height="50" class="iconos-top-categorias">
+            </div>
+            <div class="columna">
+                <a href=""><strong>Moda para Mujeres</strong></a>
+                <img src="./img/vestido.png" alt="" width="50" height="50" class="iconos-top-categorias">
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- Seccion del producto del mes -->
+    <div class="container-producto-mes">
+        <div class="imagen-producto-mes"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+        <div class="container-texto-producto-mes">
+            <span class="parrafo-azul">PRODUCTO DEL MES</span>                                
+            <h2>ROG Strix G531</h2>
+            <br>
+            <p>Sin embargo, a pesar de lo mucho que ansiamos tener una laptop gamer, a veces el precio 
+                puede elevarse bastante. Por ello, este año, ASUS Republic of Gamers nos presenta la nueva 
+                que siempre habías soñado: ROG Strix G531</p>
+            <br>
+            <p>Creada para ofrecer la velocidad, precisión y capacidad de respuesta necesarias para un juego 
+                de alto nivel, ASUS lanzó la nueva ROG Strix G531, que se presenta como una nueva opción de 
+                laptop gamer a un precio accesible y con las mismas características de performance y diseño 
+                de la línea ROG.</p>
+            <br>
+            <a href="#" class="parrafo-azul">Ver mas <i class="fa-solid fa-arrow-right"></i></a> 
+        </div>
+    </div>
+    <br><br>
+
+    <!-- productos de belleza -->
+    <div class="contenedor">
+        <br>
+        <br>
+
+        <div>
+         <h2>Productos mas populares de belleza</h2>
+        </div>
+        <br>
+        <br>    
+        <div class="row">
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b shampoo">
+
+                </div>
+                <div>
+                    <a href=""><strong>Shampoo anticaspa</strong></a>
+
+                </div>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b resuradora">
+
+                </div>
+                <a href=""><strong>Rasuradoras</strong></a>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b cremas">
+
+                </div>
+                <a href=""><strong>Cremas exfoliantes</strong></a>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b ace">
+
+                </div>
+                <a href=""><strong>Ace Xedex</strong></a>
+            </div>            
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container-footer">
+            <h4>Laura's Store</h4>
+            <br><br>            
+            <ul>
+                <li><a href="#" id="item-inicial-footer">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Politica de Privacidad</a></li>
+            </ul>            
+            <br><br>
+            <hr> 
+            <br>           
+            <div class="seccion-copyrigth">
+                <p>© 2023 Laura's Store todos los derechos reservados</p>
+                <div class="redes-sociales">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
