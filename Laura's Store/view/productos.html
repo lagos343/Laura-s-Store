@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Laura's Store | Productos</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="logo">Laura's Store</div>
+        <input type="checkbox" id="chk_menu" hidden>
+        <nav>
+            <div class="logo">Laura's Store</div>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>
+            </ul>
+            <input type="search" name="ser_busqueda" class="barra-busqueda-nav"
+                placeholder="Busqueda....................">
+            <input type="button" value="Login" class="btn-login-nav" onclick="location.href='login.html'">
+            <input type="button" value="Sign up" class="btn-signup-nav" onclick="location.href='registro.html'">
+        </nav>
+        <input type="search" name="ser_busqueda" class="barra-busqueda" placeholder="Busqueda....................">
+        <div class="botones-header">
+            <input type="button" value="Login" class="btn-login" onclick="location.href='login.html'">
+            <input type="button" value="Sign up" class="btn-signup" onclick="location.href='registro.html'">
+        </div>
+        <div class="carrito" onclick="showCart(this)">
+            <a href="#"><i class="fa-solid fa-cart-shopping"><span class="cant-carrito">1</span></i></a>
+        </div>
+
+        <!-- Carrito de compras -->
+
+        <div class="cart-products" id="products-id">
+            <p class="close-btn" onclick="closeBtn()"><b>X </b></p>
+            <h3>Carrito de Compras</h3>
+            <div class="card-items">
+                <div class="item">
+                    <img src="../img/apple.jpg" alt="">
+                    <div class="item-content">
+                        <h5>Iphone S Pro Max</h5>
+                        <h5 class="cart-price">45.50$</h5>
+                        <h6>Cant: 3</h6>
+                    </div>
+                    <span>X</span>
+                </div>
+            </div>
+            <h2>Total: $<strong class="price-total">0</strong></h2>
+        </div>
+
+        <label for="chk_menu" class="mini-menu" onclick="miniMenuShow()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+
+    <!-- Seccion de los productos -->
+    <!-- --------------------------------------------------
+        primer par 
+    ------------------------------------------------------- -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Productos varios</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna-ofertas">
+                <h3>Iphone 13</h3>
+                <div class="img-div apple">
+
+                </div>
+                <div class="vermas">
+                    <strong>L 17,000</strong>
+                    <button class="boton carta" onclick="detalleProducto2()">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>D&G</h3>
+                <div class="img-div dg">
+
+                </div>
+
+                <div class="vermas">
+                    <strong>L 500</strong>
+                    <button class="boton carta" onclick="detalleProducto2()">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>Dell 14</h3>
+                <div class="img-div compu">
+
+                </div>
+
+                <div class="vermas">
+                    <strong>L 10,000</strong>
+                    <button class="boton carta" onclick="detalleProducto2()">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>Headsets</h3>
+                <div class="img-div gadge">
+
+                </div>
+                <div class="vermas">
+                    <strong>L 250</strong>
+                    <button class="boton carta" onclick="detalleProducto2()">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="contenedor">
+        <br>
+        <br>
+
+        <div>
+            <h2>Productos de belleza</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b shampoo">
+
+                </div>
+                <div>
+                    <a onclick="detalleProducto2()">
+                        <strong>Shampoo anticaspa</strong>
+                        <p>L 500</p>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b resuradora">
+
+                </div>
+                <a onclick="detalleProducto2()">
+                    <strong>Rasuradoras</strong>
+                    <p>L 500</p>
+                </a>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b cremas">
+
+                </div>
+                <a onclick="detalleProducto2()">
+                    <strong>Cremas exfoliantes</strong>
+                    <p>L 500</p>
+                </a>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b ace">
+
+                </div>
+                <a onclick="detalleProducto2()">
+                    <strong>Ace Xedex</strong>
+                    <p>L 500</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------------
+        segundo par 
+    ------------------------------------------------------- -->
+
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Productos gaming</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna-ofertas">
+                <h3>Grafica Nvidia RTX 3090TI</h3>
+                <div class="img-div grafica">
+
+                </div>
+                <div class="vermas">
+                    <a href=""><strong>L10,000</strong></a>
+                    <button class="boton carta" onclick="detalleProducto2()">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>Monitor HD Corser</h3>
+                <div class="img-div monitor">
+
+                </div>
+
+                <div class="vermas">
+                    <a href=""><strong>L 5,999</strong></a>
+                    <button class="boton carta" onclick="detalleProducto2()">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>Teclado Imexx</h3>
+                <div class="img-div teclado">
+
+                </div>
+
+                <div class="vermas">
+                    <a href=""><strong>L 3,500</strong></a>
+                    <button class="boton carta" onclick="detalleProducto2()">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="columna-ofertas">
+                <h3>Mouse Xtech</h3>
+                <div class="img-div mouse">
+
+                </div>
+                <div class="vermas">
+                    <a href=""><strong>L 1,500</strong></a>
+                    <button class="boton carta" onclick="detalleProducto2()">Ver Mas</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="contenedor">
+        <br>
+        <br>
+
+        <div>
+            <h2>Productos de calzado</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b zapatos-uno">
+
+                </div>
+                <div>
+                    <a onclick="detalleProducto2()">
+                        <strong>Adidas</strong>
+                        <p>L 500</p>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b zapatos-dos">
+
+                </div>
+                <a onclick="detalleProducto2()">
+                    <strong>Timberland</strong>
+                    <p>L 500</p>
+                </a>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b zapatos-tres">
+
+                </div>
+                <a onclick="detalleProducto2()">
+                    <strong>Vans</strong>
+                    <p>L 500</p>
+                </a>
+            </div>
+
+            <div class="columna-ofertas belleza">
+                <div class="img-div-b zapatos-cuatro">
+
+                </div>
+                <a onclick="detalleProducto2()">
+                    <strong>American Eagle</strong>
+                    <p>L 500</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container-footer">
+            <h4>Laura's Store</h4>
+            <br><br>
+            <ul>
+                <li><a href="productos.html" id="item-inicial-footer">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088">Politica de
+                        Privacidad</a></li>
+            </ul>
+            <br><br>
+            <hr>
+            <br>
+            <div class="seccion-copyrigth">
+                <p>© 2023 Laura's Store todos los derechos reservados</p>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/Amazon"> <i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://twitter.com/amazonnews"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.instagram.com/amazon/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://wa.me/50498068075"><i class="fa-brands fa-square-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/carrito.js"></script>    
+    <script src="../js/productos.js"></script>
+</body>
+
+</html>

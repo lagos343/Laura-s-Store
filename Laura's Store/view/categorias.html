@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/categorias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Laura's Store | Categorias</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Laura's Store</div>
+        <input type="checkbox" id="chk_menu" hidden>
+        <nav>
+            <div class="logo">Laura's Store</div>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="../view/contactanos.html">Contacto</a></li>
+            </ul>
+            <input type="search" name="ser_busqueda" class="barra-busqueda-nav" placeholder="Busqueda.......">
+            <input type="button" value="Login" class="btn-login-nav" onclick="location.href='login.html'">
+            <input type="button" value="Sign up" class="btn-signup-nav" onclick="location.href='registro.html'">
+        </nav>
+        <input type="search" name="ser_busqueda" class="barra-busqueda" placeholder="Busqueda.......">
+        <div class="botones-header">
+            <input type="button" value="Login" class="btn-login" onclick="location.href='login.html'">
+            <input type="button" value="Sign up" class="btn-signup" onclick="location.href='registro.html'">
+        </div>
+        <div class="carrito" onclick="showCart(this)">
+            <a href="#"><i class="fa-solid fa-cart-shopping"><span class="cant-carrito">1</span></i></a>
+        </div>
+
+        <!-- Carrito de compras -->
+
+        <div class="cart-products" id="products-id">
+            <p class="close-btn" onclick="closeBtn()"><b>X </b></p>
+            <h3>Carrito de Compras</h3>
+            <div class="card-items">
+                <div class="item">
+                    <img src="../img/apple.jpg" alt="">
+                    <div class="item-content">
+                        <h5>Iphone S Pro Max</h5>
+                        <h5 class="cart-price">45.50$</h5>
+                        <h6>Cant: 3</h6>
+                    </div>
+                    <span>X</span>
+                </div>
+            </div>
+            <h2>Total: $<strong class="price-total">0</strong></h2>
+        </div>
+
+        <label for="chk_menu" class="mini-menu" onclick="miniMenuShow()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+
+    <!-- categoria hogar y cocina -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Hogar y Cocina</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Utensilios de cocina</strong></a>
+                    <p>Con remates decorativos redondos en ambos extremos y soporte de pared incluido ofrece una anchura
+                        ajustable.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Sartenes</strong></a>
+                    <p>Hecho de 80% de acero inoxidable y 20% de aluminio durable, fácil de limpiar, puede ser usado en
+                        estufa u horno.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Cortineros</strong></a>
+                    <p>Con remates decorativos redondos en ambos extremos y soporte de pared incluido ofrece una anchura
+                        ajustable.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Juegos de olla</strong></a>
+                    <p>15 piezas incluye sartén de 8 pulgadas, sartén de 10 pulgadas, cacerola de 1,5 cuartos, cacerola
+                        de 2 cuartos.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Juegos de vajilla</strong></a>
+                    <p>Vajilla de 18 piezas; servicio para 6;incluye 6 cada uno: plato de comida, plato de ensalada y
+                        tazón para sopa.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Organizador para el hogar</strong></a>
+                    <p>Cada estante puede contener hasta 10 libras; cada cajón puede contener hasta 5 libras; tela
+                        elegante.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Accesorios para baño</strong></a>
+                    <p>Toalleros, Toallas, Papel,Albornoces, Jaboneras, Dosificadores de jabón, Alfombras de baño y
+                        ¡mucho más!.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Tooper para comida</strong></a>
+                    <p>Pueden ser encontrados en muchos colores, tamaños y formas Juego de 38 piezas (19 tapas y 19
+                        recipientes).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- categoria Belleza y cuidado de personal-->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Belleza y cuidado personal</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Maquillaje</strong></a>
+                    <p>Los mejores estuches de maquillaje. Incluyen los mejores productos para tu piel facial sin
+                        efectos secundarios.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Cabello</strong></a>
+                    <p>Los mejores tratamientos para el cuidado de tu cabello.Ofrecemos shampu, acondicionador, Espray
+                        de proteccion termica.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Fragancia</strong></a>
+                    <p>Las notas de olor de cada perfume te haran sentir elegante y segura. Con ingredientes
+                        antialergicos.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Cuidado bucal</strong></a>
+                    <p>Todos los productos imprescindibles para tu higiene dental. Luciras una sonrrisa radiante y
+                        fabulosa.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Cuidado personal</strong></a>
+                    <p>Encontraras los mejores productos para tu cuidado e higiene personal. Luciras radiante.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Cuidado de pies, manos y uñas</strong></a>
+                    <p>Encontraras tratamientos para uñas y decoracion de las mismas, utensilios y accesorios.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Afeitado y depilacion</strong></a>
+                    <p>Los mejores juegos de rasuradoras y las mejores cremas y tratamientos para afeitarte.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Accesorios y herramientas</strong></a>
+                    <p>Encontraras cepillos y utensilios de maquillaje, espejos, calentadores y calefactores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- categoria Moda para mujres -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Moda para mujer</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Ropa</strong></a>
+                    <p>Vestidos, top, camisetas y blusas, sueteres, trajes de baño, faldas, shorts, pantalones y
+                        leggings. </p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Calzado</strong></a>
+                    <p>Botas, deportes, exteriores, pantunflas, sandalias, tenis de moda, mocazines, zapatos sin talon.
+                    </p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Joyeria</strong></a>
+                    <p>Tobilleras, Pulseras, Broches y Prendedores, Broches y Prendedores, Aretes, Juegos de Joyería,
+                        Collares.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Relojes</strong></a>
+                    <p>Relojes de pulsera, correas de reloj, relojes de bolsillo, relojes inteligentes.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Bolsas y carteras</strong></a>
+                    <p>Bolsas con asa superior, bolsas cross-body, bolsas de hombro, bolsas de mano y noche.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Accesorios</strong></a>
+                    <p>Gafas y accesorios, guantes y mitones, sombreros y gorras, billeteras y organizadores.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Trajes de etiqueta</strong></a>
+                    <p>Los mejores traje sastre, tanto en pantalon como falda, con o sin chaqueta, vestidos.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Pijamas</strong></a>
+                    <p>Las mejores pijamas con ellas te sentiras y dormiras comoda como nunca antes.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Electronicos y computadoras -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Electrónicos y computadoras</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Accesorios y suministros</strong></a>
+                    <p>Accesorios para camaras y fotos, accesorios de celulares, cables, soportes, microfonos.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Camaras y fotografia</strong></a>
+                    <p>Camaras digitales, camaras simuladas, fotografia de rollo, proyectores de video, video, lentes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Television y video</strong></a>
+                    <p>Reproductores y grabadoras de video, lentes de video virtual, television satelital, accesorios.
+                    </p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Electronicos de oficina</strong></a>
+                    <p>Calculadoras, camaras para documentos, copiadoras, escaneres, impresoras y proyectores.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Computadoras y tablets</strong></a>
+                    <p>Computadoras de escritorio, laptops, tablets y accesorios de las mismas.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Productos para redes</strong></a>
+                    <p>Adaptadores de red, antenas de red, routers, repetidores, almacenamiento conectado a red.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Almacenamiento de datos</strong></a>
+                    <p>Discos duros externos, discos duros internos, unidades de estado solido, unidades flash.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Garantias y servicios</strong></a>
+                    <p>Garantias para computadoras, planes de servicio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arte y artesanias-->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Arte y Artesanias</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Costura</strong></a>
+                    <p>Accesorios para maquina, patrones de costura, maquinas de coser, maquinas de bordar, adornos y
+                        ornamentos.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Bordado</strong></a>
+                    <p>Articulos para fieltro, encaje y labor de encaje, bordado en cañamazo, elaboracion de tapetes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Tejido y croshet</strong></a>
+                    <p>Agujas de tejido, alamcenamiento de estambre, ganchos de tejido, patrones de tejido y patrones
+                        para croshet.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Estampado</strong></a>
+                    <p>Materiales para grabado y litografia, papel para imprimir, serigrafia, tintas para grabado.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Decoracion de tela</strong></a>
+                    <p>Herramientas de aplicacion, kits para decorar telas, pinturas para telas y tejidos tintes.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Suministros para pintura, dibujo y arte</strong></a>
+                    <p>Tableros y lienzos, dibujo, pintura, caballetes, papel para manualidades.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Coleccion de recortes y sellos</strong></a>
+                    <p>Bases para cortar,papel y cartulina, fotografias, calcomanias, carton prensado.</p>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div id="centrar">
+                    <a href="./productos.html"><strong>Artesanias</strong></a>
+                    <p>Artesania en madera y cuero, escultura, ceramica y alfareria, elaboracion de mosaicos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- footer -->
+    <footer>
+        <div class="container-footer">
+            <h4>Laura's Store</h4>
+            <br><br>
+            <ul>
+                <li><a href="productos.html" id="item-inicial-footer">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088">Politica de
+                        Privacidad</a></li>
+            </ul>
+            <br><br>
+            <hr>
+            <br>
+            <div class="seccion-copyrigth">
+                <p>© 2023 Laura's Store todos los derechos reservados</p>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/Amazon"> <i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://twitter.com/amazonnews"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.instagram.com/amazon/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://wa.me/50498068075"><i class="fa-brands fa-square-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/carrito.js"></script>
+</body>
+
+</html>

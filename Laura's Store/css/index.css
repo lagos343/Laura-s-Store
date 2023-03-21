@@ -1,0 +1,705 @@
+:root{
+    --azulsuave: #2EC5CE;
+    --blanco: #fff;
+    --grisoscuro: #20262E;    
+    --rosasuave: #F1E4FF;
+}
+
+/*Transicion*/
+
+@keyframes Aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: var(--blanco);
+    animation: Aparecer .5s ease-in-out;
+}
+
+footer a {
+	color: var(--blanco);
+}
+
+/*-------------------------------------------------------------------------------------------------------
+Esta seccion contiene los estilo de la primer parte de la pagina, la parte de quienes somos
+---------------------------------------------------------------------------------------------------------*/
+
+.container-quienes-somos{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-quienes-somos{
+    width: 30%;
+    margin-right: 100px;
+}
+
+.imagen-quienes-somos img{
+    max-height: 490px;
+    max-width: 460px;
+    width: 100%;
+}
+
+.container-texto{
+    width: 30%;
+}
+
+.container-texto h2{
+    font-size: 30px;
+}
+
+.container-texto p{
+    line-height: 40px;
+    font-size: 20px;
+}
+
+/*-------------------------------------------------------------------------------------------------------
+Esta seccion contiene los estilo de el top de categorias 8
+---------------------------------------------------------------------------------------------------------*/
+
+.columna{
+    float: left; 
+    width: 23.5%;
+    padding: 30px;  
+    margin: 0.75%; 
+    border-radius: 5px;
+    box-shadow: 0 3px 5px var(--rosasuave), 0 5px 10px var(--rosasuave);
+    font-size: 20px;
+    height: 200px;    
+}
+
+.columna:hover a {
+    color: var(--azulsuave);
+    opacity:0.9;
+}
+
+.columna a{
+    display: block;
+    color: var(--grisoscuro);
+    margin-bottom: 40px;
+}
+
+
+.contenedor{
+    width: 100%;
+    padding: 0 70px;
+}
+
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;      
+}
+
+.iconos-top-categorias{
+    display: block;    
+}
+
+/*-------------------------------------------------------------------------------------------------------
+Esta seccion contiene los estilos de el pruducto del mes
+---------------------------------------------------------------------------------------------------------*/
+
+.container-producto-mes{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;       
+}
+
+.imagen-producto-mes{
+    transition:all .5 ease-in-out; 
+    background-position: center;
+    border-radius: 10px;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35%;
+    height: 100%;
+    background-image: url("../img/rog-strix.png");
+    box-shadow: 0 3px 5px var(--rosasuave), 0 5px 10px var(--rosasuave);
+}
+
+.imagen-producto-mes:hover{    
+    background-size: 120%;
+}
+
+.container-texto-producto-mes{
+    width: 35%;
+    padding-left: 5%;
+}
+
+.container-texto-producto-mes p{
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.parrafo-azul{
+    font-size: 15;
+    color: var(--azulsuave);
+}
+
+.parrafo-azul i{
+    color: var(--azulsuave);
+}
+
+.container-texto-producto-mes a:hover{
+    transition: 0.2s;
+    margin-left: 10px;
+}
+
+/*-------------------------------------------------------------------------------------------------------
+Esta seccion contiene los estilos de los libros
+---------------------------------------------------------------------------------------------------------*/
+#libro1{
+    background-image: url("../img/apolo2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#libro2{
+    background-image: url("../img/apolodark.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#libro3{
+    background-image: url("../img/fuego.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#libro4{
+    background-image: url("../img/game.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#libro5{
+    background-image: url("../img/lola.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#libro6{
+    background-image: url("../img/poter-fenix.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.columna-libros{
+    float: left; 
+    width: 280px;
+    padding: 30px;  
+    margin: 20px; 
+    border-radius: 5px;
+    font-size: 20px;
+    min-height: 400px;
+    box-shadow: 0 3px 5px var(--grisoscuro), 0 5px 10px var(--grisoscuro);
+}
+
+.columna-libros:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 5px var(--azulsuave), 0 5px 10px var(--azulsuave);    
+}
+
+.contenedor-libros{
+    margin-bottom: 70px;
+    width: 100%;
+    padding: 0 70px;
+}
+
+
+.row-libros::after{
+    content: "";
+    display: table;
+    clear: both;      
+}
+
+.row-libros{
+    width: 960px;
+}
+
+.container-row-libros{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*-------------------------------------------------------------------------------------------------------
+Esta seccion contiene los estilos de las ofertas
+---------------------------------------------------------------------------------------------------------*/
+.boton.carta
+{
+    background-color: #2EC5CE;
+    border-style: none;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    border-radius: 5px;
+    width: 90px;
+    color: #ffffff;
+    margin: auto;
+    float: right;
+    cursor: pointer;
+}
+.img-div-b{
+    overflow:hidden;
+    content: "";
+    width: 250px;
+    min-height: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:all .3s ease-in-out;
+}
+.img-div-b:hover{
+    -webkit-transform:scale(0.9);
+    transform:scale(0.9);
+}
+.img-div{
+    overflow:hidden;
+    content: "";
+    width: 350px;
+    min-height: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:all .3s ease-in-out;
+    /* background-size: cover; */
+}
+.img-div:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+.apple{
+    background-image: url('../img/apple.jpg');
+}
+.dg{
+    background-image: url('../img/dg.jpg');
+}
+.compu{
+    background-image: url('../img/compus.jpg');
+}
+.gadge{
+    background-image: url('../img/gadget.png');
+}
+.ace{
+    background-image: url('../img/ace.png');
+}
+.cremas{
+    background-image: url('../img/cremas.jpg');
+}
+.resuradora{
+    background-image: url('../img/rasuradora.png');
+}
+.shampoo{
+    background-image: url('../img/shmapoo.jpg');
+}
+.columna-ofertas{
+    float: left; 
+    width: 50%;
+    padding: 30px;  
+    margin: 0.75%; 
+    font-size: 20px;
+    height: 25rem;
+    margin: auto; 
+    margin-bottom: 5rem;
+    padding: 2rem;    
+}
+
+a{
+    cursor: pointer;
+}
+
+.columna-ofertas strong{
+    color: var(--grisoscuro);
+}
+
+.columna-ofertas p{
+    color: var(--grisoscuro);
+}
+.columna-ofertas.belleza{
+
+    float: left; 
+    width: 23.5%;
+    padding: 30px;  
+    margin: 0.75%; 
+    font-size: 20px;
+    height: 25rem;  
+    margin: auto; 
+    margin-bottom: 5rem;
+    padding: 2rem;
+    text-align: center;
+}
+.vermas{
+    margin: 1rem;
+    padding-bottom: .5rem;
+    
+}
+
+
+@media screen and (max-width: 1300px) {
+  
+    /*---------------------------------------
+    seccion de quienes somos*/
+    .container-texto p{
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .container-texto h2{
+        font-size: 25px;
+    }
+    
+    /*---------------------------------------
+    seccion de producto del mes*/
+    .container-texto-producto-mes p{
+        font-size: 17px;
+    }
+    
+    .imagen-producto-mes{
+        width: 40%;
+    }
+
+    .container-texto-producto-mes{
+        width: 40%;
+    }
+
+    /*---------------------------------------
+    seccion de libros*/
+    .row-libros{
+        width: 840px;
+    }
+
+    .columna-libros{
+        width: 240px;
+        min-height: 342px;
+    }
+
+    .contenedor-libros h2{
+        font-size: 25px;
+    }
+
+    /*---------------------------------------
+    seccion de top categorias*/
+    .contenedor h2{
+        font-size: 25px;
+    }
+
+    .img-div-b{
+        content: "";
+        width: 180px;
+        min-height: 100%;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: cover; */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    /*---------------------------------------
+    seccion de quienes somos*/
+    .container-texto{
+        width: 40%;
+    }
+
+    .imagen-quienes-somos{
+        margin-right: 50px;
+        width: 40%;
+    }
+
+    /*---------------------------------------
+    seccion de top 8 categorias*/
+    .columna{
+        float: left; 
+        width: 23.5%;
+        padding: 30px;  
+        margin: 0.75%; 
+        border-radius: 5px;
+        box-shadow: 0 3px 5px var(--rosasuave), 0 5px 10px var(--rosasuave);
+        font-size: 18px;
+        height: 200px;    
+    }
+
+    .contenedor{
+        width: 100%;
+        padding: 0 50px;
+    }
+
+    /*---------------------------------------
+    seccion de producto del mes*/
+    
+    .imagen-producto-mes{
+        width: 44%;
+    }
+
+    .container-texto-producto-mes{
+        width: 44%;
+    }
+
+    /*---------------------------------------
+    seccion de libros*/
+    .row-libros{
+        width: 640px;
+    }
+
+    .columna-libros{
+        margin: 20px 40px;
+    }
+
+    /*---------------------------------------
+    seccion ofertas de productos*/
+    .columna-ofertas.belleza{
+        width: 50%;
+    }    
+}
+
+@media screen and (max-width: 800px){
+
+    /*---------------------------------------
+    seccion de quienes somos*/
+    .container-quienes-somos{
+        padding: 50px 0;
+        display: block;
+        justify-content: center;
+    }
+
+    .imagen-quienes-somos{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .imagen-quienes-somos img{
+        width: 50%;
+    }
+
+    .container-texto{
+        min-height: 250px;
+        padding: 0 50px;
+        width:  100%;
+        display: block;
+        justify-content: center;
+    }
+
+    .container-texto p{
+        text-align: center;        
+    }
+
+    .container-texto h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    /*---------------------------------------
+    seccion de top 8 categorias*/
+
+    .columna{        
+        font-size: 14px;   
+    }
+
+
+    .contenedor{
+        padding: 0 15px;
+    }
+
+    /*---------------------------------------
+    seccion de producto del mes*/
+    
+    .container-producto-mes{
+        padding: 10%;
+        display: block;
+    }
+
+    .imagen-producto-mes{        
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .container-texto-producto-mes{
+        padding-left: 0;
+        width: 100%;
+        display: block;        
+    }   
+
+    /*---------------------------------------
+    seccion de libros*/
+    .contenedor-libros{
+        padding: 0 30px;
+        margin-bottom: 30px;
+    }
+    .row-libros{
+        width: 500px;
+    }
+
+    .columna-libros{
+        width: 183px;
+        min-height: 271px;
+        margin: 20px 30px;
+    }
+
+    /*---------------------------------------
+    seccion ofertas de productos*/
+    .columna-ofertas{
+        width: 100%;
+    }
+
+    .columna-ofertas.belleza{
+        width: 100%;
+        height: 18rem;
+    }
+
+    .columna-ofertas h3{
+        font-size: 16px;
+    }
+
+    .columna-ofertas strong, .columna-ofertas p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    
+    /*---------------------------------------
+    seccion de quienes somos*/
+    .container-quienes-somos{
+        padding-bottom: 0;
+    }
+    .imagen-quienes-somos{
+        margin-bottom: 25px;
+    }
+    .imagen-quienes-somos img{
+        width: 50%;        
+    }
+
+    .container-texto h2{
+        font-size: 17px;
+    }
+
+    .container-texto p{
+        font-size: 14px;
+    }
+
+    /*---------------------------------------
+    seccion de top 8 categorias*/
+
+    .contenedor h2{
+        font-size: 17px;
+    }
+
+    .columna{
+        width: 48%;        
+        font-size: 15px;  
+    }
+
+    .contenedor{
+        padding: 0 30px;
+    }
+
+    /*---------------------------------------
+    seccion de producto del mes*/
+    .imagen-producto-mes{
+        height: 200px;
+    }
+    .container-texto-producto-mes h2{
+        font-size: 17px;
+    }
+
+    .container-texto-producto-mes p{
+        font-size: 14px;
+    }
+
+    .parrafo-azul{
+        font-size: 13px;
+    }
+
+    /*---------------------------------------
+    seccion de libros*/
+
+    .contenedor-libros h2{
+        font-size: 17px;
+    }
+
+    .row-libros{
+        width: 340px;
+    }
+
+    .columna-libros{
+        width: 130px;
+        min-height: 185px;
+        margin: 15px 19px;
+    }
+
+    /*---------------------------------------
+    seccion ofertas de productos*/
+    .img-div{
+        content: "";
+        width: 250px;
+        min-height: 100%;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: cover; */
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    /*---------------------------------------
+    seccion de quienes somos*/
+    .container-texto{
+        padding: 20px;
+    }
+
+    .container-texto p{
+        line-height: 25px;
+    }
+
+    /*---------------------------------------
+    seccion de top 8 categorias*/
+    .columna{        
+        font-size: 15px;   
+    }
+
+    .contenedor h2{
+        font-size: 17px;
+    }
+
+    .contenedor{
+        padding: 0 20px;
+    }
+
+    /*---------------------------------------
+    seccion de producto del mes*/
+    .imagen-producto-mes{
+        height: 180px;
+    }
+
+    /*---------------------------------------
+    seccion de libros*/
+    .row-libros{
+        width: 260px;
+    }
+
+    .columna-libros{
+        width: 110px;
+        min-height: 155px;
+        margin: 10px 10px;
+    }  
+
+}
+

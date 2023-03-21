@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../css/detalle-producto.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<title>Laura's Store | Detalles del Producto</title>
+    
+</head>
+<body>
+	<header>        
+        <div class="logo">Laura's Store</div>
+        <input type="checkbox" id="chk_menu" hidden>              
+        <nav>
+            <div class="logo">Laura's Store</div>            
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>
+            </ul>
+            <input type="search" name="ser_busqueda" class="barra-busqueda-nav" placeholder="Busqueda...................."> 
+            <input type="button" value="Login" class="btn-login-nav" onclick="location.href='login.html'">
+            <input type="button" value="Sign up" class="btn-signup-nav" onclick="location.href='registro.html'">
+        </nav>   
+        <input type="search" name="ser_busqueda" class="barra-busqueda" placeholder="Busqueda...................."> 
+        <div class="botones-header">
+            <input type="button" value="Login" class="btn-login" onclick="location.href='login.html'">
+            <input type="button" value="Sign up" class="btn-signup" onclick="location.href='registro.html'">  
+        </div>
+        <div class="carrito" onclick="showCart(this)">
+            <a href="#"><i class="fa-solid fa-cart-shopping"><span class="cant-carrito">1</span></i></a>
+        </div>     
+
+        <!-- Carrito de compras -->
+
+        <div class="cart-products" id="products-id">
+            <p class="close-btn" onclick="closeBtn()"><b>X </b></p>
+            <h3>Carrito de Compras</h3>
+            <div class="card-items">
+                <div class="item">
+                    <img src="../img/apple.jpg" alt="">
+                    <div class="item-content">
+                        <h5>Iphone S Pro Max</h5>
+                        <h5 class="cart-price">45.50$</h5>
+                        <h6>Cant: 3</h6>
+                    </div>
+                    <span>X</span>
+                </div>                
+            </div>
+            <h2>Total: $<strong class="price-total">0</strong></h2>
+        </div>
+        
+        <label for="chk_menu" class="mini-menu" onclick="miniMenuShow()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+	
+	<main>
+		<div class="container-detalle-producto">
+            <div class="container-2">
+                <div id="product-info">
+                    <div class="product-img">
+                        <img src="../img/apple.jpg" alt="">
+                    </div>
+                    <div class="product-desc">
+                        <h2>Descripción del producto</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nisi nec purus venenatis, ac volutpat sapien aliquam. Sed vel luctus elit.</p>
+                        <br><br>
+                        <h2>Detalles técnicos</h2>
+                        <ul>
+                            <li>Tamaño: X pulgadas</li>
+                            <li>Peso: X libras</li>
+                            <li>Color: X</li>
+                            <li>Material: X</li>
+                            <li>Garantía: X años</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="product-price">
+                    <h2>Precio</h2>
+                    <p>$XXX.XX</p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container-footer">
+                <h4>Laura's Store</h4>
+                <br><br>            
+                <ul>
+                <li><a href="productos.html" id="item-inicial-footer">Productos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="contactanos.html">Contacto</a></li>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088">Politica de Privacidad</a></li>
+                </ul>            
+                <br><br>
+                <hr> 
+                <br>           
+                <div class="seccion-copyrigth">
+                    <p>© 2023 Laura's Store todos los derechos reservados</p>
+                    <div class="redes-sociales">
+                    <a href="https://www.facebook.com/Amazon">  <i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://twitter.com/amazonnews"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.instagram.com/amazon/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://wa.me/50498068075"><i class="fa-brands fa-square-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="../js/carrito.js"></script>        
+	</main>   
+</body>
+
+</html>
