@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/contactanos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Laura's Store | Contacto</title>
+</head>
+
+<body>
+    <!-- header -->    
+    <%- include ('components/header'); -%>
+
+    <br><br>
+
+    <!-- Formulario de contacto -->
+    <div class="container-form">
+        <div class="info-form">
+            <h2>Contáctanos</h2>
+            <p>Contamos con muchos profesionales que estan atentos para atender cualquier duda o problema con nuestros
+                servicio las 24 horas del dia</p>
+            <a href="https://wa.me/50498068075"><i class="fa fa-phone"></i> +504 9806-8075</a>
+            <a href="mailto:laurasstore03@gmail.com"><i class="fa fa-envelope"></i> laurasstore03@gmail.com</a>
+            <a href="https://goo.gl/maps/XpdR9rQmvRvEkLdD7"><i class="fa fa-map-marked"></i> Danli, El Paraiso</a>
+        </div>
+        <form action="/sendinfo"  autocomplete="off">
+            <input type="text" name="nombre" placeholder="Tu Nombre" class="campo">
+            <input type="emal" name="email" placeholder="Tu Email" class="campo">
+            <textarea name="mensaje" placeholder="Tu Mensaje..."></textarea>
+            <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">
+        </form>
+    </div>
+    <br><br>
+
+    <!-- footer -->
+    <%- include ('components/footer'); -%>
+    <script src="/js/carrito.js"></script>
+</body>
+
+</html>

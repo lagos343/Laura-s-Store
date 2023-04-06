@@ -1,0 +1,178 @@
+:root{
+    --azulsuave: #2EC5CE;
+    --blanco: #fff;
+    --grisoscuro: #20262E;    
+    --rosasuave: #F1E4FF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes Aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+    background: var(--blanco);
+    animation: Aparecer .5s ease-in-out;
+}
+
+footer a {
+	color: var(--blanco);
+}
+
+.container-producto-mes{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-producto-mes:hover{    
+    background-size: 120%;
+}
+
+.imagen-producto-mes{
+    border-radius: 10px;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 35%;
+    height: 100%;
+    box-shadow: 0 3px 5px var(--rosasuave), 0 5px 10px var(--rosasuave);
+}
+
+.oferta1{
+    background-image: url("../img/rog-strix.png");
+}
+
+.oferta2{
+    background-image: url("../img/monitor-acer.jpg");
+}
+
+.oferta3{
+    background-image: url("../img/freidora-vortex.jpg");
+}
+
+.oferta4{
+    background-image: url("../img/impresora-canon.webp");
+}
+
+.oferta5{
+    background-image: url("../img/espuma-colchón.webp");
+}
+
+#precio-anterior, .p-precio-anterior{
+    text-decoration: line-through;
+    color: red;
+}
+
+#precio{
+    text-decoration: solid;
+}
+
+.container-texto-producto-mes{
+    width: 35%;
+    padding-left: 5%;
+}
+
+.container-texto-producto-mes p{
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.parrafo-azul{
+    font-size: 15;
+    color: var(--azulsuave);
+}
+
+.parrafo-azul i{
+    color: var(--azulsuave);
+}
+
+.container-texto-producto-mes a:hover{
+    transition: 0.2s;
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 1300px) {
+  
+    .container-texto-producto-mes p{
+        font-size: 17px;
+    }
+    
+    .imagen-producto-mes{
+        width: 40%;
+    }
+
+    .container-texto-producto-mes{
+        width: 40%;
+    }   
+}
+
+@media screen and (max-width: 1000px) {
+
+    .imagen-producto-mes{
+        width: 44%;
+    }
+
+    .container-texto-producto-mes{
+        width: 44%;
+    }
+}
+
+@media screen and (max-width: 800px){
+       
+    .container-producto-mes{
+        padding: 10%;
+        display: block;
+    }
+
+    .imagen-producto-mes{        
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .container-texto-producto-mes{
+        padding-left: 0;
+        width: 100%;
+        display: block;        
+    }    
+}
+
+@media screen and (max-width: 560px) {
+    
+    .imagen-producto-mes{
+        height: 200px;
+    }
+    .container-texto-producto-mes h2{
+        font-size: 17px;
+    }
+
+    .container-texto-producto-mes p{
+        font-size: 14px;
+    }
+
+    .parrafo-azul{
+        font-size: 13px;
+    }   
+}
+
+@media screen and (max-width: 400px){
+
+    .imagen-producto-mes{
+        height: 180px;
+    }
+}

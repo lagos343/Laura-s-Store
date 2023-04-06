@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="/css/productos.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title><%=Titulo%></title>
+</head>
+<body> 
+    <!-- header -->    
+    <%- include ('components/header'); -%>
+        
+    <!-- Seccion de presentacion -->
+    <div class="container-quienes-somos">
+        <div class="imagen-quienes-somos">
+            <img src="img/chicagerente.png" alt="chica gerente">
+        </div>
+        <div class="container-texto">
+            <h2>¿Quienes Somos?</h2><br>
+            <p>Somos una empresa responsable y comprometida con nuestros clientes, tratamos de que 
+                los productos lleguen en el mejor estado y en el menor tiempo posible, para nosotros 
+                nuestros clientes son lo mas importante por eso tenemos los plazos de garantia mas 
+                largos del mercado.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Seccion de ofertas especiales -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Productos destacados</h2>
+        </div>
+        <br>
+        <br>    
+        <div class="row">
+            <% ProductosOferta.forEach(function(producto){ %>
+                <%- include('components/productospopulares', {producto: producto}); %>
+            <% }); %>
+        </div>
+
+    </div> 
+    
+    <!-- Seccion de lista de los ibros mas vendidos -->
+    <br><br>
+    <div class="contenedor-libros">
+        <div><h2>Libros mas vendidos</h2></div>
+        <br><br>
+        <div class="container-row-libros">
+            <div class="row-libros">  
+                <% Libros.forEach(function(Libro){ %>
+                    <%- include('components/libro', {libro: Libro}); %>
+                <% }); %>          
+                
+            </div>
+        </div>     
+             
+    </div>
+
+    <!-- Seccion de el top de categorias -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+         <h2>Top 8 categorias mas compradas</h2>
+        </div>
+        <br><br>    
+        <div class="row">
+            <% topcategorias.forEach(function(producto){ %>
+                <%- include('components/topofertas', {producto: producto}); %>
+            <% }); %>
+            
+        </div>
+    </div>
+    <br><br>
+
+    <!-- Seccion del producto del mes -->
+    <div class="container-producto-mes">
+        <div class="imagen-producto-mes"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+        <div class="container-texto-producto-mes">
+            <span class="parrafo-azul">PRODUCTO DEL MES</span>
+            <h2>ROG Strix G531</h2>
+            <br>
+            <p>Sin embargo, a pesar de lo mucho que ansiamos tener una laptop gamer, a veces el precio
+                puede elevarse bastante. Por ello, este año, ASUS Republic of Gamers nos presenta la nueva
+                que siempre habías soñado: ROG Strix G531</p>
+            <br>
+            <p>Creada para ofrecer la velocidad, precisión y capacidad de respuesta necesarias para un juego
+                de alto nivel, ASUS lanzó la nueva ROG Strix G531, que se presenta como una nueva opción de
+                laptop gamer a un precio accesible y con las mismas características de performance y diseño
+                de la línea ROG.</p>
+            <br>
+            <a onclick="detalleProducto()" class="parrafo-azul">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- productos de belleza -->
+    <div class="contenedor">
+        <br>
+        <br>
+
+        <div>
+         <h2>Productos mas populares de belleza</h2>
+        </div>
+        <br>
+        <br>    
+        <div class="row">
+            <% OfertasBelleza.forEach(function(oferta){ %>
+                <%- include('components/productosdebelleza', {oferta: oferta}); %>
+            <% }); %>
+  
+        </div>
+    </div>
+
+    <!-- footer -->
+    <%- include ('components/footer'); -%>
+</body>
+</html>

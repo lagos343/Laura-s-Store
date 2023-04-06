@@ -1,0 +1,8 @@
+<div class="container-row-libros">
+    <div class="row-libros">  
+        <% Libros.forEach(function(Libro){ %>
+            <%- include('components/libro', {libro: Libro}); %>
+        <% }); %>          
+        
+    </div>
+</div>     

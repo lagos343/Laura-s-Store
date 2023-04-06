@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/categorias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Laura's Store | Categorias</title>
+</head>
+
+<body>
+    <!-- header -->    
+    <%- include ('components/header'); -%>
+
+    <!-- categoria hogar y cocina -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Hogar y Cocina</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <% categorias1.forEach(function(categoria){ %>
+                
+                <%- include('components/categorias', {categoria: categoria}); %>
+            <% }); %>
+        </div>
+    </div>
+
+    <!-- categoria Belleza y cuidado de personal-->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Belleza y cuidado personal</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <% categorias2.forEach(function(categoria){ %>
+                
+                <%- include('components/categorias', {categoria: categoria}); %>
+            <% }); %>
+        </div>
+    </div>
+
+    <!-- categoria Moda para mujres -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Moda para mujer</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <% categorias3.forEach(function(categoria){ %>
+                
+                <%- include('components/categorias', {categoria: categoria}); %>
+            <% }); %>
+        </div>
+
+    </div>
+
+    <!-- Electronicos y computadoras -->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Electrónicos y computadoras</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <% categorias4.forEach(function(categoria){ %>
+                
+                <%- include('components/categorias', {categoria: categoria}); %>
+            <% }); %>
+            
+        </div>
+    </div>
+
+    <!-- Arte y artesanias-->
+    <br><br>
+    <div class="contenedor">
+        <div>
+            <h2>Arte y Artesanias</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <% categorias5.forEach(function(categoria){ %>
+                
+                <%- include('components/categorias', {categoria: categoria}); %>
+            <% }); %>
+            
+        </div>
+    </div>
+    <br><br>
+
+    <!-- footer -->
+    <%- include ('components/footer'); -%>
+</body>
+
+</html>

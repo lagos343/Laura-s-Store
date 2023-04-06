@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../css/detalle-producto.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<title>Laura's Store | Detalles del Producto</title>
+    
+</head>
+<body>
+	<!-- header -->    
+    <%- include ('components/header'); -%>
+	
+	<main>
+		<div class="container-detalle-producto">
+            <div class="container-2">
+                <div id="product-info">
+                    <div class="product-img">
+                        <img src="<%=producto.urlimagen%>" alt="<%=producto.nombre%>">
+                    </div>
+                    <div class="product-desc">
+                        <h2>Descripción del producto</h2>
+                        <p><%=producto.descripcion%></p>
+                        <br><br>
+                        <h2>Detalles técnicos</h2>
+                        <ul>
+                            <% for(var i=0; i<detalles.length; i++) {%>
+                                <li><%= detalles[i] %></li>
+                             <% } %>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="product-price">
+                    <h2>Precio</h2>
+                    <p>$XXX.XX</p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+    <%- include ('components/footer'); -%>
+	</main>   
+</body>
+
+</html>
