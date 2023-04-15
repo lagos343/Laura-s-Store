@@ -108,35 +108,6 @@ body{
     transform:scale(1.1);
 }
 
-.ace{
-    background-image: url('../img/ace.png');
-}
-.cremas{
-    background-image: url('../img/cremas.jpg');
-}
-.resuradora{
-    background-image: url('../img/rasuradora.png');
-}
-.shampoo{
-    background-image: url('../img/shmapoo.jpg');
-}
-
-/*------------------------------
-segundo bloque de productos*/
-
-.zapatos-uno{
-    background-image: url('../img/calzado-zapatos-uno.jpeg');
-}
-.zapatos-dos{
-    background-image: url('../img/calzado-zapatos-dos.jpeg');
-}
-.zapatos-tres{
-    background-image: url('../img/calzado-zapatos-tres.jpeg');
-}
-.zapatos-cuatro{
-    background-image: url('../img/calzado-zapatos-cuatro.jpeg');
-}
-
 
 .columna-ofertas{
     float: left; 
