@@ -31,9 +31,10 @@ async function GetProductosDeBelleza(){
 async function GetProductoszapatos(){
     return await db.collection("producto de calzado").get();
 }
-async function GetUserByEmail(email){
-    return await db.collection("users").where("email","==",email).get();
+async function GetUserByEmail(email,password){
+    return await db.collection("users").where("email","==",email).where("password","==",password).get();
 }
+
 async function CrearCarrito(correo,item){
     let Carrito = await GetToCarrito(correo);
     
@@ -41,16 +42,26 @@ async function CrearCarrito(correo,item){
     {
         let data = {
             correo:correo,
-            items:[item]
+            items:[item],
+            completado:false
         }
         return db.collection('carrito').add(data)
     }
 }
+
 async function UpdateCarrito(correo,items){
-
+    let Carrito = await GetToCarrito(correo);
+    if(Carrito == null)
+    {
+        return await CrearCarrito(correo,items);
+    }
+    console.log(Carrito)
+    //db.collection('carrito').doc(Carrito.)
 }
-async function GetToCarrito(correo){
 
+async function GetToCarrito(correo){
+    let documento = db.collection('carrito').where("completado","==",false).where("correo","==",correo).get();
+    return documento;
 }
 
 module.exports ={

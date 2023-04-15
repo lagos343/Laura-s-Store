@@ -4,7 +4,8 @@ const firebase = require('../database/firestore');
 const auth = require('../auth/firebaseAuth');
 const lib = require('../lib/lib')
 const mid = require('../Middleware/middle');
-
+const csrf = require('csurf');
+const csrfProtection = csrf({ cookie: true });
 // Inicio
 Router.get('/',mid.authmd,async (req,res)=>{
     const ProductosOferta =await firebase.GetProductsAsync();
@@ -98,16 +99,48 @@ Router.get('/detalles',mid.authmd,async(req,res)=>{
 
 // login
 Router.get('/login',(req,res)=>{
-    res.render('login',{Titulo:'Wash Nyc | DashBoard'});
+    res.render('login',
+    {
+        Titulo:'Wash Nyc | DashBoard',
+        csrfToken: req.csrfToken()
+    });
 });
-Router.get('/loginn',async (req,res)=>{
-    var login = await firebase.GetUserByEmail(req.query.email);
-    console.log(login);
-    if(login.email == null){
+Router.post('/loginn',csrfProtection,async (req,res)=>{
+    if(!req.body.email)
+    {
+        console.log("correo nulo redirigiendo")
+        res.redirect('/login');
+        return;
+    } 
+    if(!req.body._csrf)
+    {
+        console.log("token nulo redirigiendo")
+        res.redirect('/login');
+        return;
+    }
+    if(!req.body.password)
+    {
+        console.log("pass nulo redirigiendo")
+         res.redirect('/login');
+         return;
+    }
+    
+    var login = await firebase.GetUserByEmail(req.body.email, req.body.password);
+    console.log(login.docs.length)
+    if(login.docs.length < 1) 
+    {
+        console.log("no hay usuarios registrado")
+        res.redirect('/login');
+        return;
+    };
+    login = login.docs.map(x => x.data());
+
+
+    if(login[0].email == null){
         res.redirect('/login')
 
     }else{
-        res.cookie("email", login.email);
+        res.cookie("email", login[0].email);
         res.cookie("auth",true);
         res.redirect('/')
     }
@@ -126,4 +159,9 @@ Router.get('/registroo',async(req,res)=>{
 
     res.redirect('/')
 })
+
+//Carrito
+Router.post('/getcarrito',async (req, res)=>{
+    console.log(req.body);
+});
 module.exports=Router;
