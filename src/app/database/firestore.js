@@ -42,5 +42,6 @@ module.exports ={
     GetProductosDeBelleza,
     GetCategoriasByName,
     GetProductoszapatos,
-    GetProductByname
+    GetProductByname,
+    db
 }
