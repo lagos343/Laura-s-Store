@@ -26,6 +26,11 @@ if(localStorage.getItem('countProduct')){
     amountProduct.innerHTML = countProduct;
 }
 
+if(localStorage.getItem('totalCard')){
+    totalCard = parseInt(localStorage.getItem('totalCard'));
+    priceTotal.innerHTML = totalCard;
+}
+
 //functions
 loadEventListenrs();
 function loadEventListenrs(){
@@ -134,5 +139,6 @@ function loadHtml(){
 
  function saveLocalStorage() {
     localStorage.setItem('buyThings', JSON.stringify(buyThings)); 
-    localStorage.setItem('countProduct', countProduct);// guardar los datos en el localStorage como un string JSON
+    localStorage.setItem('countProduct', countProduct);
+    localStorage.setItem('totalCard', totalCard);// guardar los datos en el localStorage como un string JSON
 }

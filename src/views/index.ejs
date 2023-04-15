@@ -48,21 +48,7 @@
 
     </div> 
     
-    <!-- Seccion de lista de los ibros mas vendidos -->
-    <br><br>
-    <div class="contenedor-libros">
-        <div><h2>Libros mas vendidos</h2></div>
-        <br><br>
-        <div class="container-row-libros">
-            <div class="row-libros">  
-                <% Libros.forEach(function(Libro){ %>
-                    <%- include('components/libro', {libro: Libro}); %>
-                <% }); %>          
-                
-            </div>
-        </div>     
-             
-    </div>
+    <!-- Seccion de lista de los ibros mas vendidos -->   
 
     <!-- Seccion de el top de categorias -->
     <br><br>
