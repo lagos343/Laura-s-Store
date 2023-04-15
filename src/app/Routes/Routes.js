@@ -4,6 +4,7 @@ const firebase = require('../database/firestore');
 const auth = require('../auth/firebaseAuth');
 const lib = require('../lib/lib')
 const mid = require('../Middleware/middle');
+
 // Inicio
 Router.get('/',mid.authmd,async (req,res)=>{
     const ProductosOferta =await firebase.GetProductsAsync();
@@ -101,11 +102,12 @@ Router.get('/login',(req,res)=>{
 });
 Router.get('/loginn',async (req,res)=>{
     var login = await firebase.GetUserByEmail(req.query.email);
-    console.log(login)
-    if(login == null){
+    console.log(login);
+    if(login.email == null){
         res.redirect('/login')
 
     }else{
+        res.cookie("email", login.email);
         res.cookie("auth",true);
         res.redirect('/')
     }

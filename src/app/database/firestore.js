@@ -34,6 +34,25 @@ async function GetProductoszapatos(){
 async function GetUserByEmail(email){
     return await db.collection("users").where("email","==",email).get();
 }
+async function CrearCarrito(correo,item){
+    let Carrito = await GetToCarrito(correo);
+    
+    if(Carrito == null)
+    {
+        let data = {
+            correo:correo,
+            items:[item]
+        }
+        return db.collection('carrito').add(data)
+    }
+}
+async function UpdateCarrito(correo,items){
+
+}
+async function GetToCarrito(correo){
+
+}
+
 module.exports ={
     GetUserByEmail,
     GetProductsAsync,
@@ -43,5 +62,7 @@ module.exports ={
     GetCategoriasByName,
     GetProductoszapatos,
     GetProductByname,
-    db
+    CrearCarrito,
+    UpdateCarrito,
+    GetToCarrito
 }
