@@ -236,6 +236,16 @@ nav ul li a:hover{
     color: var(--azulsuave);
 }
 
+#realizarCompra{    
+    width: fit-content;padding: 8px; margin-bottom: 15px;align-self: center;justify-self: center;
+}
+
+.container_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*1300 de ancho se hace mas pequeños los items*/
 @media screen and (max-width: 1300px){
     .logo{

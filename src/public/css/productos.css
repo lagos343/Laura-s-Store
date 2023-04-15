@@ -64,17 +64,19 @@ body{
 .img-div-b{
     overflow: hidden;
     content: "";
-    width: 250px;
+    width: 100%;
     min-height: 100%;
     margin: auto;
     background-repeat: no-repeat;
     background-position: center;
 }
-.img-div-b:hover{
+.img-div-b img:hover{
     -webkit-transform:scale(0.9);
     transform:scale(0.9);
 }
 .img-div{
+    display: flex;
+    align-items: center;
     overflow: hidden;
     content: "";
     width: 350px;
@@ -84,22 +86,28 @@ body{
     background-position: center;
     /* background-size: cover; */
 }
-.img-div:hover{
+.img-div img{    
+    max-width: 100%;
+    /*min-height: 80%;*/
+    margin: auto;
+    image-resolution: no-repeat;
+    image-rendering: center;
+    /* background-size: cover; */
+}
+
+.img-div-b img{    
+    /*width: 350px;*/
+    min-height: 80%;
+    margin: auto;
+    image-resolution: no-repeat;
+    image-rendering: center;
+    /* background-size: cover; */
+}
+.img-div img:hover{
     -webkit-transform:scale(1.1);
     transform:scale(1.1);
 }
-.apple{
-    background-image: url('../img/apple.jpg');
-}
-.dg{
-    background-image: url('../img/dg.jpg');
-}
-.compu{
-    background-image: url('../img/compus.jpg');
-}
-.gadge{
-    background-image: url('../img/gadget.png');
-}
+
 .ace{
     background-image: url('../img/ace.png');
 }
@@ -115,19 +123,6 @@ body{
 
 /*------------------------------
 segundo bloque de productos*/
-
-.grafica{
-    background-image: url('../img/grafica.jpeg');
-}
-.monitor{
-    background-image: url('../img/monitor-gaming.jpeg');
-}
-.teclado{
-    background-image: url('../img/teclado-gaming.jpeg');
-}
-.mouse{
-    background-image: url('../img/mouse-gamingjpeg.jpeg');
-}
 
 .zapatos-uno{
     background-image: url('../img/calzado-zapatos-uno.jpeg');

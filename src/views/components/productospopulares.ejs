@@ -1,10 +1,10 @@
 <div class="columna-ofertas">
     <h3><%=producto.nombre%></h3>
-    <div class="img-div <%=producto.class%>">
-
+    <div class="img-div">
+        <img src="<%=producto.urlimagen%>">
     </div>
     <div class="vermas">
-        <strong><%=producto.precio%></strong>
+        <strong>L <%=producto.precio%></strong>
         <button class="boton carta" onclick="detalleProducto('<%=producto.nombre%>')">Ver Mas</button>
     </div>
     <hr>
