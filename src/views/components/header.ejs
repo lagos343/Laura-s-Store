@@ -1,5 +1,5 @@
 <header>
-    <script src="js/carrito.js"></script>
+    <script src="js/showcart.js"></script>
     <script src="js/productos.js"></script>
     <div class="logo">Laura's Store</div>
     <input type="checkbox" id="chk_menu" hidden>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="carrito" onclick="showCart(this)">
-        <a href="#"><i class="fa-solid fa-cart-shopping"><span class="cant-carrito">1</span></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"><span class="cant-carrito">0</span></i></a>
     </div>
 
     <!-- Carrito de compras -->
@@ -33,15 +33,7 @@
         <p class="close-btn" onclick="closeBtn()"><b>X </b></p>
         <h3>Carrito de Compras</h3>
         <div class="card-items">
-            <div class="item">
-                <img src="img/apple.jpg" alt="">
-                <div class="item-content">
-                    <h5>Iphone S Pro Max</h5>
-                    <h5 class="cart-price">45.50$</h5>
-                    <h6>Cant: 3</h6>
-                </div>
-                <span>X</span>
-            </div>
+            
         </div>
         <h2>Total: $<strong class="price-total">0</strong></h2>
     </div>
@@ -51,4 +43,5 @@
         <div></div>
         <div></div>
     </label>
+
 </header>

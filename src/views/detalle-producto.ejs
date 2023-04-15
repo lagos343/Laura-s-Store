@@ -23,15 +23,14 @@
                         <img src="<%=producto.urlimagen%>" alt="<%=producto.nombre%>">
                     </div>
                     <div class="product-desc">
-                        <h2>Descripción del producto</h2>
+                        <h2><%=producto.nombre%></h2>
                         <p><%=producto.descripcion%></p>
                         <br><br>
                         <h2>Detalles técnicos</h2>
                         <ul>
                             <% for(var i=0; i<detalles.length; i++) {%>
                                 <li><%= detalles[i] %></li>
-                             <% } %>
-                            
+                             <% } %>                           
                             
                         </ul>
                     </div>
@@ -39,14 +38,14 @@
                 
                 <div id="product-price">
                     <h2>Precio</h2>
-                    <p>$XXX.XX</p>
-                    <button>Agregar al carrito</button>
+                    <p>L <span><%=producto.precio%></span></p>
+                    <button class="btn-add-cart">Agregar al carrito</button>
                 </div>
             </div>
         </div>
-
         <!-- footer -->
     <%- include ('components/footer'); -%>
+    <script src="js/carrito.js"></script>
 	</main>   
 </body>
 
