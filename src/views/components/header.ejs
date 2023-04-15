@@ -1,6 +1,7 @@
 <header>
     <script src="js/showcart.js"></script>
     <script src="js/productos.js"></script>
+    <script src="js/carritofetch.js"></script>
     <div class="logo">Laura's Store</div>
     <input type="checkbox" id="chk_menu" hidden>
     <nav>
@@ -30,6 +31,7 @@
     <!-- Carrito de compras -->
 
     <div class="cart-products" id="products-id">
+        <input id="token" type="hidden" name="_csrf" value="<%= csrfToken %>">
         <p class="close-btn" onclick="closeBtn()"><b>X </b></p>
         <h3>Carrito de Compras</h3>
         <div class="card-items">

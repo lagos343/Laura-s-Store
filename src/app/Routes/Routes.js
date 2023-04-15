@@ -30,7 +30,8 @@ Router.get('/',mid.authmd,async (req,res)=>{
         ProductosOferta:lib.GetRandom(ProductosOferta.docs.map(x => x.data()), 4) ,
         Libros:Libros.docs.map(x => x.data()),
         topcategorias:categoriass,
-        OfertasBelleza:OfertasBelleza.docs.map(x => x.data())
+        OfertasBelleza:OfertasBelleza.docs.map(x => x.data()),
+        csrfToken: req.csrfToken()
     });
 });
 
@@ -50,7 +51,8 @@ Router.get('/categorias',mid.authmd,async(req,res)=>{
             categorias2:categorias2.docs.map(x => x.data().categorias.map(y => y))[0],
             categorias3:categorias3.docs.map(x => x.data().categorias.map(y => y))[0],
             categorias4:categorias4.docs.map(x => x.data().categorias.map(y => y))[0],
-            categorias5:categorias5.docs.map(x => x.data().categorias.map(y => y))[0]
+            categorias5:categorias5.docs.map(x => x.data().categorias.map(y => y))[0],
+            csrfToken: req.csrfToken()
         
     });
 });
@@ -66,21 +68,25 @@ Router.get('/productos',mid.authmd,async(req,res)=>{
         ProductosOferta:lib.GetRandom(ProductosOferta.docs.map(x => x.data()), 4),
         ProductosOferta2:lib.GetRandom(ProductosOferta.docs.map(x => x.data()), 4),
         OfertasBelleza:OfertasBelleza.docs.map(x => x.data()),
-        Ofertaszapato:Ofertaszapato.docs.map(x => x.data())
+        Ofertaszapato:Ofertaszapato.docs.map(x => x.data()),
+        csrfToken: req.csrfToken()
     });
 });
 
 // nosotros
 Router.get('/contactanos',mid.authmd,async(req,res)=>{
-    res.render('contactanos',{Titulo:'Wash Nyc | About'});
+    res.render('contactanos',{Titulo:'Wash Nyc | About',
+    csrfToken: req.csrfToken()});
 });
 Router.get('/sendinfo',mid.authmd,async(req,res)=>{
-    res.render('contactanos',{Titulo:'Wash Nyc | About'});
+    res.render('contactanos',{Titulo:'Wash Nyc | About',
+    csrfToken: req.csrfToken()});
 });
 
 //ofertas
 Router.get('/ofertas',mid.authmd,async(req,res)=>{
-    res.render('ofertas',{Titulo:'Wash Nyc | About'});
+    res.render('ofertas',{Titulo:'Wash Nyc | About',
+    csrfToken: req.csrfToken()});
 });
 
 // detalles
@@ -92,7 +98,8 @@ Router.get('/detalles',mid.authmd,async(req,res)=>{
     {
         Titulo:'Wash Nyc | Login',
         producto:datos.docs.map(x => x.data())[0],
-        detalles:detalles
+        detalles:detalles,
+        csrfToken: req.csrfToken()
     });
 });
 
@@ -160,8 +167,15 @@ Router.get('/registroo',async(req,res)=>{
     res.redirect('/')
 })
 
+//factura
+Router.get('/infocompra',(req,res)=>[
+
+]);
 //Carrito
-Router.post('/getcarrito',async (req, res)=>{
-    console.log(req.body);
+Router.post('/getcarrito',csrfProtection, async (req, res)=>{
+    let data = await firebase.GetToCarrito(req.cookies.email);
+    
+    console.log(data.docs.length);
 });
+
 module.exports=Router;

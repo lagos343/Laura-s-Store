@@ -17,6 +17,7 @@ let countProduct = 0;
 //leemos si hay algo el en local storage
 if (localStorage.getItem('buyThings')) {
     buyThings = JSON.parse(localStorage.getItem('buyThings'));
+    console.log(buyThings)
     loadHtml();
 }
 
