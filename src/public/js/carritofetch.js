@@ -19,12 +19,12 @@ function GetCarritoByEmail()
         ClearAll();
         window.alert("Compra realizada con exito!");       
         response.json().then((doc) => {
-          console.log(doc)
+          console.log(doc);
           location.href='/infocompra?id='+doc.id
         })  
       })
       .catch(error => {
-        console.log('mal')
+        console.log('mal');
         // Aquí puedes manejar los errores de la solicitud
       });
 }

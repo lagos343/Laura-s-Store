@@ -14,7 +14,9 @@ async function GetProductsAsync() {
 async function GetProductByname(name){
     return await db.collection("productos").where("nombre","==",name).get();
 }
-
+async function SetNombreById(id,data){
+    return await db.collection("productos").doc(id).set(data);
+}
 async function GetCategorias(){
     return await db.collection("Categorias").get();
 }
@@ -57,5 +59,6 @@ module.exports ={
     GetProductoszapatos,
     GetProductByname,
     CrearCarrito,
-    getFacturaById
+    getFacturaById,
+    SetNombreById
 }

@@ -183,8 +183,15 @@ Router.post('/savecarrito',csrfProtection, async (req, res)=>{
     let Document = {
         email:req.cookies.email,
         productos:req.body.productos
-    }
-    
+    };
+    req.body.productos.forEach(async (x) => {
+        let productotoupdate = await firebase.GetProductByname(x.id);
+        let datatoupdate = productotoupdate.docs[0].data();
+        console.log(datatoupdate.amount);
+        datatoupdate.cant -= x.amount;
+        console.log(datatoupdate.amount);
+        await firebase.SetNombreById(productotoupdate.docs[0].id, datatoupdate)
+    });
     let data = await firebase.CrearCarrito(Document);
     console.log('data: '+data)
     res.status(200).send(data);
