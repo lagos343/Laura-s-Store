@@ -158,5 +158,7 @@ function ClearAll(){
 }
 
 function RealizarCompra(){
-    GetCarritoByEmail();
+    if (countProduct !== 0) {        
+        GetCarritoByEmail();
+    }
 }
