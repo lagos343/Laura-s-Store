@@ -33,19 +33,25 @@
       </tbody>
     </table>
     <div class="total-factura">
-      <% function saludar() { %>
-        <%let arrayprecios = detalles.map((x) => parseFloat(x.price));%>
+      <%let ivas = 0;%>
+      <%let total = 0;%>
+      <% function subtotal() { %>
+        <%let arrayprecios = detalles.map((x) => parseFloat(x.price) * parseInt(x.amount));%>
         <%let arraymontos = detalles.map((x) => parseInt(x.amount));%>
-        <%return arrayprecios.reduce(function(acumulador, valorActual) {
+        <%let sumadeproductos = arrayprecios.reduce(function(acumulador, valorActual) {
           return acumulador + valorActual;
         })%>
+        <%total = sumadeproductos;%>
+        <%let sub = sumadeproductos - iva(sumadeproductos);%>
+        <%ivas=iva(sumadeproductos)%>
+        <%return sub;%>
       <% } %>
-      <span> <span id="subtotal">Subtotal: L <%= saludar() %></span></span>
-      <span>IVA (15%): L <%=(((detalles.map((x) => x.price * x.amount)))*(0.15)) %><span id="iva"></span></span>
-      <span>Total: L <%= (detalles.map((x) => x.price * x.amount)) %><span id="total"></span></span>
-    </div>
-    <div>
-      <a href="/"><button id="regresar">Regresar</button></a>
+      <% function iva(suma) {%>
+        <%return (suma*0.15);%>
+      <% } %>
+      <span> <span id="subtotal">Subtotal: L <%= subtotal() %></span></span>
+      <span>IVA (15%): L <%=ivas %><span id="iva"></span></span>
+      <span>Total: L <%= total%><span id="total"></span></span>
     </div>
     </div>
   </body>
