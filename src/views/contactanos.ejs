@@ -30,12 +30,19 @@
             <a href="mailto:laurasstore03@gmail.com"><i class="fa fa-envelope"></i> laurasstore03@gmail.com</a>
             <a href="https://goo.gl/maps/XpdR9rQmvRvEkLdD7"><i class="fa fa-map-marked"></i> Danli, El Paraiso</a>
         </div>
-        <form action="/sendinfo"  autocomplete="off">
+        <form action= "https://formsubmit.co/Laurasstore03@gmail.com" method="POST">
             <input type="text" name="nombre" placeholder="Tu Nombre" class="campo">
             <input type="emal" name="email" placeholder="Tu Email" class="campo">
             <textarea name="mensaje" placeholder="Tu Mensaje..."></textarea>
-            <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">
+            <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+
+            
+            <input type="hidden" name="_next" value="http://localhost:3000"> 
+            <input type="hidden" name="_captcha" value="false">
+
         </form>
+
+
     </div>
     <br><br>
 
