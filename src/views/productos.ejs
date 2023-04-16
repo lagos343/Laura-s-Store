@@ -37,27 +37,7 @@
     </div>
 
     <br><br>
-    <div class="contenedor">
-        <br>
-        <br>
-
-        <div>
-            <h2>Productos de belleza</h2>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-            <% OfertasBelleza.forEach(function(oferta){ %>
-                <%- include('components/productosdebelleza', {oferta: oferta}); %>
-            <% }); %>
-        </div>
-    </div>
-
-    <!-- --------------------------------------------------
-        segundo par 
-    ------------------------------------------------------- -->
-
-    <br><br>
+    <br><br><br><br>
     <div class="contenedor">
         <div>
             <h2>Productos gaming</h2>
@@ -71,23 +51,8 @@
         </div>
     </div>
 
-    <br><br>
-    <div class="contenedor">
-        <br>
-        <br>
-
-        <div>
-            <h2>Productos de calzado</h2>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-            <% Ofertaszapato.forEach(function(oferta){ %>
-                <%- include('components/productosdebelleza', {oferta: oferta}); %>
-            <% }); %>
-        </div>
-    </div>
-
+    <br><br>    
+    <br><br><br><br>
     <!-- footer -->
     <%- include ('components/footer'); -%>
     <script src="/js/carrito.js"></script>    
