@@ -35,34 +35,13 @@ async function GetUserByEmail(email,password){
     return await db.collection("users").where("email","==",email).where("password","==",password).get();
 }
 
-async function CrearCarrito(correo,item){
-    let Carrito = await GetToCarrito(correo);
-    
-    if(Carrito == null)
-    {
-        let data = {
-            correo:correo,
-            items:[item],
-            completado:false
-        }
-        return db.collection('carrito').add(data)
-    }
+async function CrearCarrito(item){
+   
+        
+        return db.collection('carrito').add(item)
 }
 
-async function UpdateCarrito(correo,items){
-    let Carrito = await GetToCarrito(correo);
-    if(Carrito == null)
-    {
-        return await CrearCarrito(correo,items);
-    }
-    console.log(Carrito)
-    //db.collection('carrito').doc(Carrito.)
-}
 
-async function GetToCarrito(correo){
-    let documento = db.collection('carrito').where("completado","==",false).where("correo","==",correo).get();
-    return documento;
-}
 
 module.exports ={
     GetUserByEmail,
@@ -73,7 +52,5 @@ module.exports ={
     GetCategoriasByName,
     GetProductoszapatos,
     GetProductByname,
-    CrearCarrito,
-    UpdateCarrito,
-    GetToCarrito
+    CrearCarrito
 }

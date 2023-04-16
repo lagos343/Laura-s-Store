@@ -168,14 +168,18 @@ Router.get('/registroo',async(req,res)=>{
 })
 
 //factura
-Router.get('/infocompra',(req,res)=>[
+Router.get('/infocompra',(req,res)=>{
+    res.render('factura')
+});
 
-]);
 //Carrito
-Router.post('/getcarrito',csrfProtection, async (req, res)=>{
-    let data = await firebase.GetToCarrito(req.cookies.email);
+Router.post('/savecarrito',csrfProtection, async (req, res)=>{
+    let Document = {
+        email:req.cookies.email,
+        productos:req.body.productos
+    }
     
-    console.log(data.docs.length);
+    let data = await firebase.CrearCarrito(Document);
 });
 
 module.exports=Router;

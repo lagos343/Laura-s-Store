@@ -143,3 +143,21 @@ function loadHtml(){
     localStorage.setItem('countProduct', countProduct);
     localStorage.setItem('totalCard', totalCard);// guardar los datos en el localStorage como un string JSON
 }
+
+
+function ClearAll(){
+    clearHtml();
+    buyThings = []
+    totalCard = 0;
+    countProduct = 0;
+    localStorage.removeItem('buyThings');
+    localStorage.removeItem('totalCard');
+    localStorage.removeItem('countProduct');
+    priceTotal.innerHTML = totalCard;
+
+        amountProduct.innerHTML = countProduct;
+}
+
+function RealizarCompra(){
+    
+}
