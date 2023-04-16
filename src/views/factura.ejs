@@ -53,7 +53,31 @@
       <span>IVA (15%): L <%=ivas %><span id="iva"></span></span>
       <span>Total: L <%= total%><span id="total"></span></span>
     </div>
+    <a href="/"><button class = "button"style="background-color: gainsboro;
+      color: black;
+      height: 38px;
+      border-radius: 5px;
+      border: .5;  
+      font-size: 15px;
+      cursor: pointer;
+      padding: 10px;">Regresar</button></a>
+
+      <button style="background-color: gainsboro;
+      color: black;
+      height: 38px;
+      border-radius: 5px;
+      border: .5;  
+      font-size: 15px;
+      cursor: pointer;
+      padding: 10px;" onclick="imprimir()" class="button">Imprimir</button>
     </div>
-    <a href="/"><button>Regresar</button></a>
+    
+    </div>
+
+    <script>
+      function imprimir() {
+        window.print();
+      }
+    </script>
   </body>
 </html>

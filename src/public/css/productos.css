@@ -80,7 +80,7 @@ body{
     overflow: hidden;
     content: "";
     width: 350px;
-    max-height: 200px;
+    min-height: 350px;
     margin: auto;
     background-repeat: no-repeat;
     background-position: center;
