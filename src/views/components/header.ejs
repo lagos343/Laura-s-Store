@@ -20,8 +20,16 @@
     
     
 
-    <div class="carrito" onclick="showCart(this)">
-        <a href="#"><i class="fa-solid fa-cart-shopping"><span class="cant-carrito">0</span></i></a>
+    <div class="botones-header">
+        <div class="carrito" onclick="showCart(this)">
+            <a href="#"><i class="fa-solid fa-cart-shopping"><span class="cant-carrito">0</span></i></a>
+        </div>
+    
+        <label for="chk_menu" class="mini-menu" onclick="miniMenuShow()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
     </div>
 
     <!-- Carrito de compras -->
@@ -37,10 +45,6 @@
         <div class="container_button"><button id="realizarCompra" onclick="RealizarCompra()" class="btn-signup">Relizar compra</button></div>
     </div>
 
-    <label for="chk_menu" class="mini-menu" onclick="miniMenuShow()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </label>
+    
 
 </header>

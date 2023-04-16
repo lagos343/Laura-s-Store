@@ -82,28 +82,13 @@
                 laptop gamer a un precio accesible y con las mismas características de performance y diseño
                 de la línea ROG.</p>
             <br>
-            <a onclick="detalleProducto()" class="parrafo-azul">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
+            <a onclick="detalleProducto('ROG Strix G531')" class="parrafo-azul">Ver mas <i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
     <br><br>
 
     <!-- productos de belleza -->
-    <div class="contenedor">
-        <br>
-        <br>
-
-        <div>
-         <h2>Productos mas populares de belleza</h2>
-        </div>
-        <br>
-        <br>    
-        <div class="row">
-            <% OfertasBelleza.forEach(function(oferta){ %>
-                <%- include('components/productosdebelleza', {oferta: oferta}); %>
-            <% }); %>
-  
-        </div>
-    </div>
+    
 
     <!-- footer -->
     <%- include ('components/footer'); -%>

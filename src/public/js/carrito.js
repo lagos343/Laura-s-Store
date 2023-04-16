@@ -57,7 +57,7 @@ function deleteProduct(e) {
         const deleteId = e.target.getAttribute('data-id');
 
         buyThings.forEach(value => {
-            if (value.id == deleteId) {
+            if (value.id === deleteId) {
                 let priceReduce = parseFloat(value.price) * parseFloat(value.amount);
                 totalCard =  totalCard - priceReduce;
                 totalCard = totalCard.toFixed(2);
@@ -104,7 +104,7 @@ function readTheContent(product){
                 totalCard = parseFloat(totalCard) + parseFloat(infoProduct.price);
                 totalCard = totalCard.toFixed(2);
                 return product;
-            } else {
+            } else {                
                 return product
             }
         });
@@ -112,6 +112,8 @@ function readTheContent(product){
     } else {
         buyThings = [...buyThings, infoProduct]
         countProduct++;
+        totalCard = parseFloat(totalCard) + parseFloat(infoProduct.price);
+        totalCard = totalCard.toFixed(2);
     }
     saveLocalStorage();
     loadHtml();
@@ -128,18 +130,18 @@ function loadHtml(){
             <img src="${image}" alt="">
             <div class="item-content">
                 <h5>${title}</h5>
-                <h5 class="cart-price">${price}$</h5>
+                <h5 class="cart-price">L ${price}</h5>
                 <h6>Cant: ${amount}</h6>
             </div>
             <span class="delete-product" data-id="${id}">X</span>
         `;
 
         containerBuyCart.appendChild(row);
+    });
 
         priceTotal.innerHTML = totalCard;
 
         amountProduct.innerHTML = countProduct;
-    });
 }
  function clearHtml(){
     containerBuyCart.innerHTML = '';
