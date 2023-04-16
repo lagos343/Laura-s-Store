@@ -3,7 +3,7 @@ function GetCarritoByEmail()
     let token = document.getElementById('token').value;
     console.log(buyThings)
     let data = fetch('http://localhost:3000/savecarrito', {
-        method: 'POST',
+        method: 'get',
         headers: {
           'Content-Type': 'application/json'
         },

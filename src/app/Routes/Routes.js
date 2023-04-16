@@ -182,5 +182,8 @@ Router.post('/savecarrito',csrfProtection, async (req, res)=>{
     let data = await firebase.CrearCarrito(Document);
     res.status(200).send(data);
 });
+Router.get('/s',(req,res)=>{
+    res.redirect('/detalles')
+});
 
 module.exports=Router;
