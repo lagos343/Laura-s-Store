@@ -80,6 +80,8 @@ function deleteProduct(e) {
 }
 
 function readTheContent(product){
+    let cantidad = product.querySelector("#cantidad").value;
+    console.log('cantidad '+cantidad)
     const infoProduct = {
         image: product.querySelector('.product-img img').src,
         title: product.querySelector('.product-desc h2').textContent,
@@ -95,6 +97,10 @@ function readTheContent(product){
     if (exist) {
         const pro = buyThings.map(product => {
             if (product.id === infoProduct.id) {
+                if(product.amount>=cantidad ){
+                    window.alert("No pude agregar mas, no hay stock!");
+                    return product;
+                }
                 product.amount++;
                 return product;
             } else {

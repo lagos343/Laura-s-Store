@@ -30,7 +30,8 @@
                         <ul>
                             <% for(var i=0; i<detalles.length; i++) {%>
                                 <li><%= detalles[i] %></li>
-                             <% } %>                           
+                             <% } %>  
+                             <input type="text" hidden name="cantidad" id="cantidad" value="<%= producto.cant %>">                         
                             
                         </ul>
                     </div>
