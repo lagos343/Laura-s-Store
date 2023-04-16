@@ -189,8 +189,5 @@ Router.post('/savecarrito',csrfProtection, async (req, res)=>{
     console.log('data: '+data)
     res.status(200).send(data);
 });
-Router.get('/s',(req,res)=>{
-    res.redirect('/detalles')
-});
 
 module.exports=Router;

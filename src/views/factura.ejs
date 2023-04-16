@@ -34,9 +34,11 @@
     </table>
     <div class="total-factura">
       <% function saludar() { %>
-        let arrayprecios = detalles.map((x) => parseFloat(x.price));
-        let arraymontos = detalles.map((x) => parseInt(x.amount));
-        return arrayprecios.map((x) => arraymontos.map((y) => y*x))
+        <%let arrayprecios = detalles.map((x) => parseFloat(x.price));%>
+        <%let arraymontos = detalles.map((x) => parseInt(x.amount));%>
+        <%return arrayprecios.reduce(function(acumulador, valorActual) {
+          return acumulador + valorActual;
+        })%>
       <% } %>
       <span> <span id="subtotal">Subtotal: L <%= saludar() %></span></span>
       <span>IVA (15%): L <%=(((detalles.map((x) => x.price * x.amount)))*(0.15)) %><span id="iva"></span></span>
