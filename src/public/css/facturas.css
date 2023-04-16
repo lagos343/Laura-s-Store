@@ -1,0 +1,62 @@
+ /* Estilos CSS */
+ body {
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    text-align: center;
+  }
+  .datos-factura {
+    display: block;
+    justify-content: space-between;
+  }
+  .datos-factura span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .tabla-factura {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  .tabla-factura th, .tabla-factura td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+  }
+  .tabla-factura th {
+    background-color: #f2f2f2;
+  }
+  .total-factura {
+    text-align: right;
+    margin-top: 20px;
+  }
+  .total-factura span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .container_factura{
+    max-width: 1000px;
+    padding: 0 15%;
+  }
+
+  @media screen and (max-width : 900px) {
+    .container_factura{
+       
+        padding: 0 5%;
+      }
+  }
+
+  @media screen and (max-width : 600px) {
+    .container_factura{
+       
+        padding: 0 2%;
+      }
+  }
+
+  @media print {
+    /* Estilos para la vista de impresión */
+    .container_factura{
+       
+        padding: 0 2%;
+      }
+  }

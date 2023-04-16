@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Factura</title>
+    <link rel="stylesheet" href="/css/facturas.css">
+  </head>
+  <body>
+    <div class="container_factura">
+      <h1>Factura</h1>
+    <div class="datos-factura">      
+      <span>Email del comprador: <span id="email-comprador"><%=correo%></span></span>
+      <span>Fecha y hora: <span id="fecha-hora"><%= new Date().getDate() %>/<%= new Date().getMonth() %>/<%= new Date().getFullYear() %></span></span>
+    </div>
+    <table class="tabla-factura">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio unitario</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="detalle-factura">
+        <% for(var i=0; i<detalles.length; i++) {%>
+          <tr>
+            <th><%= detalles[i].title %></th>
+            <th><%= detalles[i].price %></th>
+            <th><%= detalles[i].amount %></th>
+            <th><%= parseFloat(detalles[i].price) * parseInt(detalles[i].amount)%></th>
+          </tr>
+       <% } %>    
+      </tbody>
+    </table>
+    <div class="total-factura">
+      <% function saludar() { %>
+        let arrayprecios = detalles.map((x) => parseFloat(x.price));
+        let arraymontos = detalles.map((x) => parseInt(x.amount));
+        return arrayprecios.map((x) => arraymontos.map((y) => y*x))
+      <% } %>
+      <span> <span id="subtotal">Subtotal: L <%= saludar() %></span></span>
+      <span>IVA (15%): L <%=(((detalles.map((x) => x.price * x.amount)))*(0.15)) %><span id="iva"></span></span>
+      <span>Total: L <%= (detalles.map((x) => x.price * x.amount)) %><span id="total"></span></span>
+    </div>
+    <div>
+      <a href="/"><button id="regresar">Regresar</button></a>
+    </div>
+    </div>
+  </body>
+</html>

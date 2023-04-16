@@ -17,7 +17,11 @@ function GetCarritoByEmail()
         // Aquí puedes procesar la respuesta de la solicitud
         console.log('nice')
         ClearAll();
-        window.alert("Compra realizada con exito!");
+        window.alert("Compra realizada con exito!");       
+        response.json().then((doc) => {
+          console.log(doc)
+          location.href='/infocompra?id='+doc.id
+        })  
       })
       .catch(error => {
         console.log('mal')

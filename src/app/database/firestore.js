@@ -36,9 +36,13 @@ async function GetUserByEmail(email,password){
 }
 
 async function CrearCarrito(item){
-   
-        
-        return db.collection('carrito').add(item)
+    let retorno = await db.collection('carrito').add(item)      
+    return {id: retorno.id};
+}
+
+async function getFacturaById(item){
+    let retorno = await db.collection('carrito').doc(item).get();      
+    return retorno.data();
 }
 
 
@@ -52,5 +56,6 @@ module.exports ={
     GetCategoriasByName,
     GetProductoszapatos,
     GetProductByname,
-    CrearCarrito
+    CrearCarrito,
+    getFacturaById
 }
