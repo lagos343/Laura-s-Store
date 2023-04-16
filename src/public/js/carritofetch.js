@@ -15,9 +15,12 @@ function GetCarritoByEmail()
       })
       .then(response => {
         // Aquí puedes procesar la respuesta de la solicitud
-        window.alert("Compra realizada con exito!"+response.json);
+        console.log('nice')
+        ClearAll();
+        window.alert("Compra realizada con exito!");
       })
       .catch(error => {
+        console.log('mal')
         // Aquí puedes manejar los errores de la solicitud
       });
 }

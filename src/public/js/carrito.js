@@ -154,10 +154,9 @@ function ClearAll(){
     localStorage.removeItem('totalCard');
     localStorage.removeItem('countProduct');
     priceTotal.innerHTML = totalCard;
-
-        amountProduct.innerHTML = countProduct;
+    amountProduct.innerHTML = countProduct;
 }
 
 function RealizarCompra(){
-    
+    GetCarritoByEmail();
 }
