@@ -169,5 +169,7 @@ function ClearAll(){
 function RealizarCompra(){
     if (countProduct !== 0) {        
         GetCarritoByEmail();
+    }else{
+        window.alert("Añada cosas al carrito primero!!!!")
     }
 }

@@ -51,10 +51,15 @@
        
         padding: 0 2%;
       }
+
+      *{
+        font-size: 13px;
+      } 
   }
 
   @media print {
     /* Estilos para la vista de impresión */
+    
     .container_factura{
        
         padding: 0 2%;
